@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dribble-portfolio_uinugget</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/408/408743.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div class="nav">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+<div class="pr">
+    <a href="#"><h2>Portfolio Web Exploration v2</h2></a>
+    <h3>by<span>Mehedi Hasan Roni</span></h3>
+</div>
+
+    </div> -->
+    <div id="main">
+      <div class="firstpage">
+        <div class="p1nav">
+          <h2>CoX</h2>
+          <div class="nd">
+            <h4>Home</h4>
+            <h4>About ME</h4>
+            <h4>Case Study</h4>
+            <button><h3>Hire Me</h3></button>
+          </div>
+        </div>
+        <div class="fup">
+          <h1>I'm Elena Cox.</h1>
+          <h5>UI_UX Designer and love to play cricket.</h5>
+        </div>
+        <div class="fdown">
+          <img src="/real.png" alt="" />
+        </div>
+      </div>
+      <div class="secondpage">
+        <div class="upper">
+          <h5>Work With:</h5>
+          <div class="work">
+            <img src="/jgdfk.png" alt="" />
+          </div>
+        </div>
+        <div class="middle">
+          <h1>Specializing In</h1>
+          <h5 style="padding-bottom: 5px">
+            Lorem ipsum dolor sit, amet consectetur adipisicing
+          </h5>
+          <h5>natus mollitia earum consequatur, dignissimos animi.</h5>
+        </div>
+        <div class="lower">
+          <div class="boxx1">
+            <div class="b1"></div>
+            <div class="txtt">
+              <h1>Graphics</h1>
+              <h1 style="padding-bottom: 30px">Design.</h1>
+              <h5>Lorem ipsum dolor sit, amet</h5>
+              <h5>natus mollitia earum consequatur.</h5>
+            </div>
+            <div class="more"><h5>Know More</h5></div>
+          </div>
+          <div class="boxx2">
+            <div class="b2">
+              <div class="txt2">
+                <h1>UI_UX</h1>
+                <h1 style="padding-bottom: 30px">Design.</h1>
+                <h5>Lorem ipsum dolor sit, amet</h5>
+                <h5>natus mollitia earum consequatur.</h5>
+              </div>
+              <div class="moree"><h5>Know More</h5></div>
+            </div>
+          </div>
+          <div class="boxx3">
+            <div class="b3">
+              <div class="txt2">
+                <h1>Product</h1>
+                <h1 style="padding-bottom: 30px">Design.</h1>
+                <h5>Lorem ipsum dolor sit, amet</h5>
+                <h5>natus mollitia earum consequatur.</h5>
+              </div>
+              <div class="moree"><h5>Know More</h5></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="thirdpage">
+        <div class="tup">
+          <h1>Case Study.</h1>
+          <h5>Lorem ipsum dolor sit, amet consectetur adipisicing</h5>
+          <h5>natus mollitia consequatur, dignissimos animi.</h5>
+        </div>
+        <div class="tdown">
+          <div class="tim">
+            <img src="/Screenshot (6).png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="fourpage">
+        <div class="fl">
+          <div class="fli">
+            '
+            <img src="/four.png" alt="" />
+          </div>
+        </div>
+        <div class="fr">
+          <div class="frup">
+            <h1>Why Me?</h1>
+            <h5>Lorem ipsum dolor sit, amet consectetur adipisicing</h5>
+            <h5>natus mollitia consequatur, dignissimos animi.</h5>
+          </div>
+          <div class="frdown">
+            <div class="btn">
+              <button>@</button>
+              <h4>Problem Solver</h4>
+            </div>
+            <div class="ull">
+              <ul>
+                <li>Find Common Problems</li>
+                <li>Research on Problems</li>
+                <li>Research on Products</li>
+              </ul>
+            </div>
+            <div class="btn">
+              <button>@</button>
+              <h4>Creative Idea</h4>
+            </div>
+            <div class="ull">
+              <ul>
+                <li>Find Common Problems</li>
+                <li>Research on Problems</li>
+                <li>Research on Products</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fivepage">
+        <div class="ftop">
+          <div class="fftxt">
+            <h1>People Are</h1>
+            <h1>Saying....</h1>
+          </div>
+          <div class="ff">
+            <div class="imggg1">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+            <div class="imggg2">
+              <img
+                src="https://images.unsplash.com/photo-1522196772883-393d879eb14d?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="fvmiddle">
+          <div class="fvl">
+            <div class="fvimg">
+              <div class="pro">
+                <img
+                  src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGV8ZW58MHwwfDB8fHww"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="fdimg">
+              <div class="pro1">
+                <img
+                  src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHwwfDB8fHww"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="fvm">
+            <div class="mmain">
+              <div class="mm">
+                <div class="mmm">
+                  <img
+                    src="https://images.unsplash.com/photo-1589525231707-f2de2428f59c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <div class="mmtxt">
+                  <h1>Jannat Emrit</h1>
+                  <h2 style="color: #4d4b4bb5">
+                    CEO,<span>We are designer</span>
+                  </h2>
+                </div>
+              </div>
+              <div class="mmml">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  blanditiis, enim sapiente corporis at eligendi ad quasi id
+                  laborum adipisci officia aperiam incidunt possimus
+                  consequuntur est placeat, quam suscipit dolore magnam
+                  asperiores voluptate vitae optio rem. Enim atque impedit
+                  repellendus numquam? Repellat asperiores sequi recusandae.
+                  <span style="color: #8a8bf9">Read More</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="fvr"></div>
+        </div>
+      </div>
+      <div class="sixpage">
+        <div class="contact">
+          <h1>Contact Me...</h1>
+        </div>
+        <div class="mail">
+          <div class="mailbox">
+            <h1>Say,Hello!</h1>
+            <h4>Elena@mikekamo.com</h4>
+            <button><h5>Say,Hello</h5></button>
+          </div>
+        </div>
+        <div class="details">
+          <div class="dupd">
+            <h3>Home</h3>
+            <h3>About <menu></menu></h3>
+            <h3>Case Study</h3>
+            <h3>Conduct</h3>
+          </div>
+          <div class="ddop">
+            <h3>Fb</h3>
+            <h3>in</h3>
+            <h3>Tw</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
